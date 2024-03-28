@@ -20,4 +20,6 @@ from .views import *
 
 urlpatterns = [
     path('', index),
+    path('job/<int:pk>/', job_detail, name='job-detail'),
+    path('all/', all_jobs, name="all_jobs")
 ]

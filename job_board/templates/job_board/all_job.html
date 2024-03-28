@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> All Jobs </h3>
+    <ul>
+        {% for item in all_jobs_list %}
+            <li> {{ item.title }} - Link is <a href="/job/{{ item.id }}">Click</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

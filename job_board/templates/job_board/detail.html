@@ -1,0 +1,18 @@
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <li> Job title: {{ post.title | title}} </li>
+        <li> Job Description: {{ post.description }} </li>
+        <li> Company Name: {{ post.company }} </li>
+        <li> Salary: ${{ post.salary }} </li>
+        <li> Is the Company still hiring? {{ post.is_active }}</li>
+    </ul>
+</body>
+</html>
