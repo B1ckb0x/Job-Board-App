@@ -19,7 +19,6 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', index),
+    path('', index, name="home"),
     path('job/<int:pk>/', job_detail, name='job-detail'),
-    path('all/', all_jobs, name="all_jobs")
 ]

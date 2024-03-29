@@ -1,18 +1,11 @@
+{% extends 'job_board/_base.html' %}
 {% load humanize %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <ul>
-        <li> Job title: {{ post.title | title}} </li>
-        <li> Job Description: {{ post.description }} </li>
-        <li> Company Name: {{ post.company }} </li>
-        <li> Salary: ${{ post.salary }} </li>
-        <li> Is the Company still hiring? {{ post.is_active }}</li>
-    </ul>
-</body>
-</html>
+{% block content %}
+<div class="w-10/12 mx-auto">
+    <p class="pb-6"><a href="{% url 'home' %}" class="border border-gray-400 rounded px-4 py-2 hover:bg-gray-200">Go back</a></p>
+    <h1 class="text-3xl font-semibold pb-4 underline underline-offset-8"> {{ post.title }} </h1>
+    <p class="pb-2 text-xl"> Company: {{ post.company }}</p>
+    <p class="pb-2 font-semibold"> Salary: ${{ post.salary | intcomma }}</p>
+    <p>Description: {{ post.description }}</p>
+</div>
+{% endblock content %}
